@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Australia_Text -->
+<!-- Author: blkbutterfly74 -->
+<!-- DateCreated: 1/16/2018 11:34:33 AM -->
+<GameData>
+	<FrontEndText>
+
+		<!-- Texts for Maps -->
+		<Row Tag="LOC_MAP_AUSTRALIA_NAME">
+			<Text>Scrambled Australia</Text>
+		</Row>
+		<Row Tag="LOC_MAP_AUSTRALIA_DESCRIPTION">
+			<Text>An internally randomized map of Australia.</Text>
+		</Row>
+
+	</FrontEndText>
+</GameData>
