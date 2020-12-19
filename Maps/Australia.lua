@@ -462,10 +462,12 @@ function GenerateTerrainTypesAustralia(plotTypes, iW, iH, iFlags, bNoCoastalMoun
 									fracXExp, fracYExp);
 									
 	iDesertTop = australia:GetHeight(100);										
-	
-	iPlainsBottom = australia:GetHeight(7);
+	local iDesertBottom;
 
-	iGrassTop = australia:GetHeight(7);
+	local iPlainsTop;	
+	local iPlainsBottom;
+
+	local iGrassTop;
 	iGrassBottom = australia:GetHeight(0);
 
 	for iX = 0, iW - 1 do
@@ -489,10 +491,24 @@ function GenerateTerrainTypesAustralia(plotTypes, iW, iH, iFlags, bNoCoastalMoun
 		for iY = 0, iH - 1 do
 			local index = (iY * iW) + iX;
 
+			local lat = (iY - iH/2)/(iH/2);
+
 			local iDistanceFromCenter = Map.GetPlotDistance (iX, iY, g_CenterX, g_CenterY);
 
-			local iDesertBottom = australia:GetHeight(iDistanceFromCenter/iW * 100);	-- more desert in the center
-			local iPlainsTop = australia:GetHeight(iDistanceFromCenter/iW * 100);
+			-- Mainland
+			if (lat > -0.7) then
+				iDesertBottom = australia:GetHeight(iDistanceFromCenter/iW * 100);		-- more desert in the center
+				iPlainsTop = australia:GetHeight(iDistanceFromCenter/iW * 100 + 7);
+				iPlainsBottom = australia:GetHeight(7);
+				iGrassTop = australia:GetHeight(7);
+
+			-- Tasmania
+			else
+				iDesertBottom = australia:GetHeight(87);
+				iPlainsTop = australia:GetHeight(87);
+				iPlainsBottom = australia:GetHeight(70);
+				iGrassTop = australia:GetHeight(70);
+			end
 
 			local desertVal = australia:GetHeight(iX, iY);
 			local plainsVal = australia:GetHeight(iX, iY);
