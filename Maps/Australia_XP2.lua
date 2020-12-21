@@ -214,7 +214,7 @@ local g_CenterY;
 local g_landStrips;
 local g_xOffset = 0;
 local g_yOffset = 0;
-local featureGen = nil;
+local featuregen = nil;
 
 -------------------------------------------------------------------------------
 function GenerateMap()

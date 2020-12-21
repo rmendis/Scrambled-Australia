@@ -461,14 +461,14 @@ function GenerateTerrainTypesAustralia(plotTypes, iW, iH, iFlags, bNoCoastalMoun
 									grain_amount, iFlags, 
 									fracXExp, fracYExp);
 									
-	iDesertTop = australia:GetHeight(100);										
+	local iDesertTop = australia:GetHeight(100);										
 	local iDesertBottom;
 
 	local iPlainsTop;	
 	local iPlainsBottom;
 
 	local iGrassTop;
-	iGrassBottom = australia:GetHeight(0);
+	local iGrassBottom = australia:GetHeight(0);
 
 	for iX = 0, iW - 1 do
 		for iY = 0, iH - 1 do
@@ -497,7 +497,7 @@ function GenerateTerrainTypesAustralia(plotTypes, iW, iH, iFlags, bNoCoastalMoun
 
 			-- Mainland
 			if (lat > -0.7) then
-				iDesertBottom = australia:GetHeight(iDistanceFromCenter/iW * 100);		-- more desert in the center
+				iDesertBottom = australia:GetHeight(iDistanceFromCenter/iW * 100 + 7);		-- more desert in the center
 				iPlainsTop = australia:GetHeight(iDistanceFromCenter/iW * 100 + 7);
 				iPlainsBottom = australia:GetHeight(7);
 				iGrassTop = australia:GetHeight(7);
