@@ -16,10 +16,7 @@
     <SupportsHotSeat>true</SupportsHotSeat>
     <AssemblyName>Scrambled Australia</AssemblyName>
     <RootNamespace>Scrambled Australia</RootNamespace>
-    <AssociationData><![CDATA[<Associations>
-  <Reference type="Dlc" title="DLC: Australia Civilization Pack" id="E3F53C61-371C-440B-96CE-077D318B36C0" />
-  <Reference type="Mod" title="Extended Great Barrier Reef" id="0d4f955c-7d7a-472c-9436-750d19339852" />
-</Associations>]]></AssociationData>
+    <AssociationData><![CDATA[<Associations />]]></AssociationData>
     <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="UpdateDatabase"><File>SQL/Config.sql</File></UpdateDatabase><UpdateText id="UpdateText"><File>XML/Australia_Text.xml</File></UpdateText></FrontEndActions>]]></FrontEndActionData>
     <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="UpdateParams"><File>XML/Australia.xml</File></UpdateDatabase><ImportFiles id="ImportMaps"><File>Maps/Australia.lua</File><File>Maps/Australia_XP2.lua</File></ImportFiles></InGameActions>]]></InGameActionData>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
