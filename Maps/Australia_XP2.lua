@@ -434,22 +434,6 @@ function AddFeatures()
 	featuregen = FeatureGenerator.Create(args);
 
 	featuregen:AddFeatures(true, true);  --second parameter is whether or not rivers start inland);
-	
-	-- Only keep floodplain far away from continent center
-	for iX = 0, g_iW - 1 do
-		for iY = 0, g_iH - 1 do
-			local index = (iY * g_iW) + iX;
-			local plot = Map.GetPlot(iX, iY);
-			if (plot:GetFeatureType() == g_FEATURE_FLOODPLAINS) then
-				local iDistanceFromCenter = Map.GetPlotDistance (iX, iY, g_CenterX, g_CenterY);
-
-				-- 50/50 chance to add floodplains when get 20 tiles out.  Linear scale out to there
-				if (TerrainBuilder.GetRandomNumber(40, "Resource Placement Score Adjust") >= iDistanceFromCenter) then
-					TerrainBuilder.SetFeatureType(plot, -1);
-				end
-			end
-		end
-	end
 end
 ------------------------------------------------------------------------------
 function GenerateTerrainTypesAustralia(plotTypes, iW, iH, iFlags, bNoCoastalMountains)
