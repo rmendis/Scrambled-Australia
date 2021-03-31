@@ -5,7 +5,7 @@
     <Name>Scrambled Australia</Name>
     <Guid>21195cc0-b731-4d44-9c6f-f30f1493b5b4</Guid>
     <ProjectGuid>876ccc9b-e4ce-4f40-996c-405b8d39daad</ProjectGuid>
-    <ModVersion>16</ModVersion>
+    <ModVersion>17</ModVersion>
     <Teaser>The Australia map from the Outback Tycoon scenario as part of the Australia DLC</Teaser>
     <Description>An internally randomised map based off the Australia map in the Outback Tycoon scenario (as part of the Australia DLC). There are two map sizes: Tiny/Small and Large. Both incl. Tasmania.</Description>
     <Authors>blkbutterfly74</Authors>
