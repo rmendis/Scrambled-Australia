@@ -283,7 +283,7 @@ function GenerateMap()
 
 	local args = {
 		resources = resourcesConfig,
-		LuxuriesPerRegion = 7,
+		iWaterLux = 2,
 		START_CONFIG = startConfig,
 	}
 	local resGen = ResourceGenerator.Create(args);
@@ -291,13 +291,12 @@ function GenerateMap()
 	print("Creating start plot database.");
 	-- START_MIN_Y and START_MAX_Y is the percent of the map ignored for major civs' starting positions.
 	local args = {
-		MIN_MAJOR_CIV_FERTILITY = 300,
+		MIN_MAJOR_CIV_FERTILITY = 175,
 		MIN_MINOR_CIV_FERTILITY = 50, 
 		MIN_BARBARIAN_FERTILITY = 1,
 		START_MIN_Y = 15,
 		START_MAX_Y = 15,
 		START_CONFIG = startConfig,
-		LAND = true,
 	};
 	local start_plot_database = AssignStartingPlots.Create(args)
 
